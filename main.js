@@ -21,7 +21,7 @@ const closewarning = () => {
 
 const leavePage = () => {
     window.close()
-    console.log('Jd Jak Coś');
+   
 }
 
 const showPopup = () => {
@@ -195,4 +195,6 @@ ok.addEventListener('click', openFullscreen)
 btn.addEventListener('click', download)
 btn.addEventListener('click', wPopup)
 ok.addEventListener('click', closewarning)
-nieOk.addEventListener('click', leavePage)
+nieOk.addEventListener('click', ()=> {
+    window.close()
+})

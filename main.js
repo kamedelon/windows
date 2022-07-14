@@ -5,7 +5,24 @@ const dimisBtn = document.querySelector('#d')
 const acceptBtn = document.querySelector('#a')
 const gifSec = document.querySelector('.gifs')
 const h1 = document.querySelector('h1')
+const warning = document.querySelector('.warning')
+const ok = document.querySelector('.ok')
+const nieOk = document.querySelector('.nieOk')
+const i = document.querySelector('.fi')
 
+const wPopup = () => {
+    warning.classList.add('zoomIn')
+    // i.classList.add('animate__tada')
+}
+
+const closewarning = () => {
+    warning.classList.remove('zoomIn')
+}
+
+const leavePage = () => {
+    window.close()
+    console.log('Jd Jak Coś');
+}
 
 const showPopup = () => {
     setTimeout(() => {
@@ -15,12 +32,13 @@ const showPopup = () => {
 
         const audio = document.getElementById("audio");
         audio.play();
-    }, 200);
+    }, 400);
 
     setTimeout(() => {
-        window.open('https://www.youtube.com/watch?v=BT9h5ifR1tY')
+        // window.open('https://www.youtube.com/watch?v=BT9h5ifR1tY')
+        window.open("https://preview.redd.it/oewoj5g85eb91.jpg?width=1280&format=pjpg&auto=webp&s=b1e216ffdf374414b8ec8fa3934808e666e1fb9f", "_blank", "JDDD KURWE", "bottom=0, right=0, width=600,height=600");
 
-    }, 10000)
+    }, 4000)
 
     setTimeout(() => {
         gifSec.style.display = "flex"
@@ -36,11 +54,14 @@ const showPopup = () => {
         audio3.play();
     }, 3500)
 
-    setTimeout(()=> {
+    setTimeout(() => {
         const screamer = document.querySelector('video')
         screamer.autoplay = "true"
         screamer.loop = "true"
         screamer.style.display = "flex"
+
+        window.open("https://www.youtube.com/watch?v=BT9h5ifR1tY", "_blank", "JDDD KURWE", "bottom=0, right=0, width=600,height=600");
+
 
         const audio0 = document.getElementById("audio0");
         audio0.loop = 'true'
@@ -101,7 +122,7 @@ const openWindow = () => {
     }, 3190)
 }
 
-const openWindow2= () => {
+const openWindow2 = () => {
     let randomNum = (Math.random() + 1).toString(36).substring(7);
     let newWindow2
     setTimeout(() => {
@@ -110,22 +131,35 @@ const openWindow2= () => {
             newWindow2.document.write(`<body><h1>JD</h1> ${randomNum} <mark> JD </mark><strong> JD </strong>
             
             <script>
-        
+                console.log('jd PETA')
             </script>
 
             </body>`)
 
-        }, 400)
+        }, 0)
     }, 3290)
 }
 
 
 
 const multipleJD = () => {
+    let randomNum = (Math.random() + 1).toString(36).substring(7);
+    let newWindow2
+    setTimeout(() => {
+        setInterval(() => {
+            newWindow2 = window.open("https://preview.redd.it/oewoj5g85eb91.jpg?width=1280&format=pjpg&auto=webp&s=b1e216ffdf374414b8ec8fa3934808e666e1fb9f", "JDDD KURWE", "bottom=0, right=0, width=600,height=600");
+            newWindow2.document.write(`
+            
+            <script>
+                console.log('jd PETA')
+            </script>
 
+            </body>`)
+
+        }, 0)
+    }, 4090)
 }
 
-multipleJD()
 
 const fadeout = () => {
     const loaderWrapper = document.querySelector('.wrapper')
@@ -135,22 +169,30 @@ const fadeout = () => {
     }, 1000)
 }
 
-window.onbeforeunload = function (e) {
-    return 'Dialog text here.';
-};
+// window.onbeforeunload = function (e) {
+//     return 'Dialog text here.';
+// };
 
-window.onbeforeunload = function (e) {
-    return 'Dialog text here.';
-};
 
-window.onbeforeunload = function (e) {
-    return 'Dialog text here.';
-};
+let elem = document.querySelector('html');
+function openFullscreen() {
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+    }
+}
+openFullscreen()
 
 window.addEventListener('load', fadeout)
-btn.addEventListener('click', openWindow)
-btn.addEventListener('click', openWindow2)
-btn.addEventListener('click', showPopup)
+ok.addEventListener('click', openWindow)
+ok.addEventListener('click', openWindow2)
+ok.addEventListener('click', showPopup)
+ok.addEventListener('click', multipleJD)
+ok.addEventListener('click', openFullscreen)
 btn.addEventListener('click', download)
-
-
+btn.addEventListener('click', wPopup)
+ok.addEventListener('click', closewarning)
+nieOk.addEventListener('click', leavePage)

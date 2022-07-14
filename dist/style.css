@@ -168,6 +168,72 @@ video {
   height: 100vh;
 }
 
+.warning {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: all 0.4s;
+  transform: translateY(700px);
+  flex-direction: column;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.678);
+  gap: 10px;
+  width: 380px;
+  height: 265px;
+  border-radius: 10px;
+  font-size: 11px;
+  position: fixed;
+  z-index: 123;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.418);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+}
+.warning h1 {
+  font-size: 20px;
+  height: 124px;
+}
+.warning mark {
+  color: red;
+  background: none;
+}
+.warning .fi {
+  font-size: 66px;
+  position: absolute;
+  top: 1px;
+  color: rgba(255, 0, 0, 0.541);
+  margin-left: 24px;
+  width: 100%;
+}
+.warning button {
+  text-align: center;
+  text-transform: uppercase;
+  width: 158px;
+  padding: 5px;
+  font-size: 6px;
+  border-radius: 5px;
+  font-size: 20px;
+  border: none;
+  background: rgba(0, 0, 0, 0.329);
+  color: rgba(255, 255, 255, 0.705);
+  cursor: pointer;
+  margin: 6px;
+}
+
+.backdrop {
+  display: flex;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  z-index: 100;
+}
+
+.zoomIn {
+  transform: translateY(0);
+}
+
 @-webkit-keyframes upDown {
   0% {
     transform: translateY(0px);

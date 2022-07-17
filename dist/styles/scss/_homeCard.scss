@@ -1,0 +1,133 @@
+.homePageCard {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    width: 550px;
+    min-height: 400px;
+    background: rgba(0, 0, 0, 0.507);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 3.5rem;
+    left: 4px;
+    backdrop-filter: blur(15px);
+    transition: all 0.3s;
+    transform: translateY(500px);
+
+    p {
+        @include flex;
+        justify-content: flex-start;
+        padding-left: 15px;
+        width: 100%;
+        height: 30px;
+        color: rgba(255, 255, 255, 0.781);
+    }
+
+    .rimg {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: all .3s;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+}
+
+.cardShow {
+    transform: translateY(0);
+}
+
+.appsBar {
+    @include flex;
+    justify-content: flex-start;
+    padding: 15px;
+    gap: 10px;
+    width: 100%;
+    height: 70px;
+    background: rgba(0, 0, 0, 0);
+}
+
+.appBox {
+    @include flex;
+    width: 70px;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.267);
+    border-radius: 10px;
+    transition: all 0.2s;
+
+    img {
+        width: 40px;
+        transition: all 0.1s;
+    }
+
+    &:active img {
+        transform: scale(80%);
+    }
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.322);
+    }
+}
+
+.weatherConteiner {
+    @include flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-top: 15px;
+    width: 230px;
+    height: 270px;
+    background: rgba(0, 0, 0, 0.267);
+
+    p {
+        @include flex;
+        padding: 10px;
+        height: 20px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .weatherContent {
+        padding: 10px;
+        text-align: left;
+        width: 100%;
+        min-height: 60px;
+        background: rgba(98, 0, 255, 0.075);
+        border-radius: 0;
+    }
+
+    img {
+        width: 70px;
+    }
+}
+
+h2 {
+    color: rgba(255, 255, 255, 0.699);
+    margin-bottom: 30px;
+}
+
+.weatherInput {
+    background: rgba(255, 255, 255, 0.199);
+    color: rgba(255, 255, 255, 0.795);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 30px;
+}
+
+.weatherBtn {
+    background: rgba(255, 255, 255, 0.199);
+    color: rgba(255, 255, 255, 0.795);
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.308);
+    }
+}

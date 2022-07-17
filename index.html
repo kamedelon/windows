@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/dist/img/w11logo.webp" type="image/gif">
+    <link rel="stylesheet" href="dist/styles/style.css">
+    <title>| W11 in JS</title>
+</head>
+
+<body onload="timer()">
+    <nav>
+        <!-- <div class="weatherWigget">
+            <img src="dist/img/iconCloud.png" alt="weather wigget cloud icon" />
+            <div class="weatherContentContainer">
+                <p>17°C</p>
+                <p>Pochmurnie</p>
+            </div>
+        </div> -->
+
+        <div class="taskBarCenter">
+            <img src="dist/img/icons/home.png" id="home" alt="Windows Home icon">
+            <img class="search" src="dist/img/icons/search.png" alt="search icon">
+            <img src="dist/img/icons/settings.png" alt="settings icon">
+            <img src="dist/img/icons/explorer.png" alt="file explorer icon">
+            <img src="dist/img/icons/edge.png" alt="edge icon">
+            <img src="dist/img/icons/store.png" alt="store icon">
+            <img src="dist/img/icons/spotify.png" alt="spotify icon">
+        </div>
+
+        <div class="taskBarDateAndWigetsContainer">
+            <div class="wigetPocket"></div>
+            <div class="DateHour">
+                <p class="TaskBarHour"></p>
+                <p class="TaskBarDate"></p>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <div class="recycleBin">
+        <img src="dist/img/icons/recycleBin.png" alt="recycle bin">
+        <p>Recycle Bin</p>
+    </div> -->
+
+    <div class="homePageCard">
+        <p>Cool Apps</p>
+        <div class="appsBar">
+            <div class="appBox"><img src="dist/img/icons/calculator.png" alt=""></div>
+            <div class="appBox"><img src="dist/img/icons/edge.png" alt=""></div>
+            <div class="appBox"><img src="dist/img/icons/notepad.png" alt=""></div>
+        </div>
+        <div class="weatherConteiner">
+            <h2 class="cityName"></h2>
+            <img class="photo" alt="">
+            <div class="weatherContent">
+                <p>Weather: <span class="weather"></span></p>
+                <p>Temp: <span class="temperature"></span></p>
+                <p>Hum: <span class="humidity"></span></p>
+            </div>
+            <div class="inputContainer">
+                <input class="weatherInput" placeholder="Type town..." type="text">
+                <button class="weatherBtn">Go</button>
+            </div>
+        </div>
+
+        <img class="rimg" src="https://source.unsplash.com/random/270x366" alt="Random img">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/timer.js"></script>
+</body>
+
+</html>
